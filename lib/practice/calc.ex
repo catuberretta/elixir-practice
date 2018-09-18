@@ -19,6 +19,6 @@ defmodule Practice.Calc do
     # |> tag_tokens  (e.g. [+, 1] => [{:op, "+"}, {:num, 1.0}]
     # |> convert to postfix
     # |> reverse to prefix
-    # |> evaluate as a stack calculator using pattern matching
+    # |> evaluate as a stack calculator using pattern matching CHANGE
   end
 end
