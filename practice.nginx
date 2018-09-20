@@ -2,8 +2,13 @@ server {
     listen 80;
     listen [::]:80;
 
+<<<<<<< HEAD
     # TODODONE: This should be your server name.
     server_name hw02b.catuberretta.com;
+=======
+    # TODO: This should be your server name.
+    server_name hw02b.ironbeard.com;
+>>>>>>> 2ee9111c8af13b55a02d980d1052ec2e5d8375aa
 
     location / {
         proxy_pass http://localhost:4790;
