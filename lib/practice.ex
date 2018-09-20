@@ -28,15 +28,14 @@ defmodule Practice do
 
   def factorHelp(val, i, list) do  
     cond do
+      (val == 1) ->
+        list ++ [val]
       (val == i) ->
-        list ++ [1, val]
+        list ++ [val]
       rem(val, i) == 0 ->
-        list ++ [i]
-        val = val / i
-        factorHelp(val, i, list)
+        factorHelp(div(val, i), i, list ++ [i])
       true ->
-        i++
-        factorHelp(val, i, list)
+        factorHelp(val, i + 1, list)
       end
   end
 
