@@ -18,19 +18,26 @@ defmodule Practice do
 
   def factor(x) do
     # Maybe delegate this too.
+    list = []
     i = 2
+    {val,noonecares} = Integer.parse(x)
+    factorHelp(val, i, list)
+  
     # factorHelp(x, i)
   end
 
-  def factorHelp(x, i) do
-   if (rem(x, i) == 0) do
-     i * 1
-     x = x / i
-     factorHelp(x, i)
-   else
-    i++
-    factorHelp(x, i)
-   end
+  def factorHelp(val, i, list) do  
+    cond do
+      (val == i) ->
+        list ++ [1, val]
+      rem(val, i) == 0 ->
+        list ++ [i]
+        val = val / i
+        factorHelp(val, i, list)
+      true ->
+        i++
+        factorHelp(val, i, list)
+      end
   end
 
   # TODODONE: Add a palindrome? function.
